@@ -5,7 +5,7 @@ function [theta, J_history] = gradientDescent(X, y, theta, alpha, num_iters)
 
 % Initialize some useful values
 m = length(y); % number of training examples
-J_history = zeros(num_iters, 1);
+J_history = zeros(num_iters, 1); %it initialize J to be an zeros matrix of n rows and 1 column where n is the number of times we want to iterate gradient descent
 
 for iter = 1:num_iters
 h=X*theta;

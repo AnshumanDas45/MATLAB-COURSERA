@@ -38,8 +38,9 @@ pause;
 
 %% ======================= Part 2: Plotting =======================
 fprintf('Plotting Data ...\n')
-data = load('ex1data1.txt');
-X = data(:, 1); y = data(:, 2);
+data = load('ex1data1.txt');        %load the data in txt format
+X = data(:, 1); y = data(:, 2);     %it means that in the data all the rows but the first column is X and the second column is y
+% matrix(:,) means all the rows of the matrix and matrix(,:) means all the column of the matrix
 m = length(y); % number of training examples
 
 % Plot Data

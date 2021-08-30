@@ -29,7 +29,7 @@ mu=mean(X);
 sigma=std(X);
 
 for iter = 1:size(X, 2)
-  X_norm(:,iter) = (X(:,iter) - mu(iter)) / sigma(iter);
+  X_norm(:,iter) = (X(:,iter) - mu(iter)) / sigma(iter); %this means that in X for every column number same as that of the iteration we subtract the mean and divide it by its standard deviation
 end
 
 

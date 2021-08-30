@@ -18,8 +18,8 @@ grad = zeros(size(theta));
 %               derivatives of the cost w.r.t. each parameter in theta
 
 h = sigmoid(X*theta);
- 
-reg = lambda/(2*m) * (theta(2:end, :)' * theta(2:end, :));
+%as we know we don't regularize theta(0) hence in the operations we want to remove the term theta(0) hence we make the theta matrix as theta(2:end,:) which means theta is the matrix with rows from 2 to end (as theta(0) is in the first row) and all the columns 
+reg = lambda/(2*m) * (theta(2:end, :)' * theta(2:end, :)); %regularization of all theta except theta(0)
 J = (1/m)*sum(((-y).*log(h)-(1-y).*log(1-h)))+ reg;
 
 grad = X' * (h - y)* (1/m)+[0;  lambda/m * theta(2:end,:)];

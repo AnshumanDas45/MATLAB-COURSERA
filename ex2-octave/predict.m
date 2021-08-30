@@ -16,10 +16,10 @@ p = zeros(m, 1);
 %
 
 
-temp = sigmoid(X*theta);
+temp = sigmoid(X*theta); %we didn't write theta'*X as we wanted a legit multiplication of the matrices hence laways keep in mind that will the multiplication happen between the matrices or not
 
 for i = 1:m
-        if temp(i) >= 0.5
+        if temp(i) >= 0.5          %as given in the question if sigmoid of theta*X is greater than 0.5 it's y value will be 1
               p(i) = 1;
         end
 end

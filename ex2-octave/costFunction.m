@@ -22,8 +22,8 @@ grad = zeros(size(theta));
 
 h = sigmoid(X*theta);
 
-J = (1/m)*sum(((-y).*log(h)-(1-y).*log(1-h)));
-grad = (1 / m) .* X' * (h - y);
+J = (1/m)*sum(((-y).*log(h)-(1-y).*log(1-h))); %element wise operation on y and log(h)
+grad = (1 / m) .* X' * (h - y);   %it is the differential of cost function
 
 
 

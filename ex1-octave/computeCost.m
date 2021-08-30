@@ -14,8 +14,8 @@ J = 0;
 %               You should set J to the cost.
 
 
-predictions = X*theta;            %ggwp
-sqrErrors   = (predictions - y).^2; %ggwp
+predictions = X*theta;            %Matrix multiplication between theta and X
+sqrErrors   = (predictions - y).^2; %here we took square element wise
 J = 1/(2*m) * sum(sqrErrors);
 
 % =========================================================================
