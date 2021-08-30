@@ -14,8 +14,8 @@ J = 0;
 %               You should set J to the cost.
 
 
-predictions = X*theta;            
-sqrErrors   = (predictions - y).^2; 
+predictions = X*theta;            %ggwp
+sqrErrors   = (predictions - y).^2; %ggwp
 J = 1/(2*m) * sum(sqrErrors);
 
 % =========================================================================
