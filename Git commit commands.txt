@@ -1,6 +1,0 @@
-git add .
-git commit -m "Description of commit"
-git push
- if failed to push some refs error comes
- use
- git push origin master --force
